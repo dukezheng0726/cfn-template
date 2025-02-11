@@ -44,7 +44,7 @@ Parameters:
   ALBName:
     Description: Enter your ALB Name
     Type: String
-    Default: "Application-ALB-Name-New"
+    Default: "Application-ALB-Name"
 
   ALBScheme:
     Description: Define your Public or Private Scheme for Load Balancer
