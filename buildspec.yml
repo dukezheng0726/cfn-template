@@ -35,7 +35,7 @@ phases:
           --stack-name ${STACK_NAME} \
           --region $AWS_REGION \
           --capabilities CAPABILITY_NAMED_IAM \
-          --parameter-overrides $(echo "${PARAMETERS}" | tr '\n' ' ')
+          --parameter-overrides (echo "${PARAMETERS}" | tr '\n' ' ')
 
   post_build:
     commands:
