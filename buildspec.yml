@@ -4,14 +4,13 @@ env:
   variables:
     STACK_NAME: "application-stack"
     TEMPLATE_FILE: "application-cfn.yaml"
-  parameter-store:
     PARAMETERS: |
-                ParameterKey=VpcID,ParameterValue=vpc-063632df62ea1985b 
-                ParameterKey=AMIID,ParameterValue=ami-0db18496905e01e3d 
-                ParameterKey=SubnetID1,ParameterValue=subnet-08034885b1739ecec 
-                ParameterKey=SubnetID2,ParameterValue=subnet-05fd5199c368282c9 
-                ParameterKey=ASGMinValue,ParameterValue=2 
-                ParameterKey=ASGMaxValue,ParameterValue=10 
+                ParameterKey=VpcID,ParameterValue=vpc-063632df62ea1985b
+                ParameterKey=AMIID,ParameterValue=ami-0db18496905e01e3d
+                ParameterKey=SubnetID1,ParameterValue=subnet-08034885b1739ecec
+                ParameterKey=SubnetID2,ParameterValue=subnet-05fd5199c368282c9
+                ParameterKey=ASGMinValue,ParameterValue=2
+                ParameterKey=ASGMaxValue,ParameterValue=10
 
 
 phases:
@@ -35,7 +34,7 @@ phases:
           --stack-name ${STACK_NAME} \
           --region $AWS_REGION \
           --capabilities CAPABILITY_NAMED_IAM \
-          --parameter-overrides (echo "${PARAMETERS}" | tr '\n' ' ')
+          --parameter-overrides $(echo "${PARAMETERS}" | tr '\n' ' ')
 
   post_build:
     commands:
