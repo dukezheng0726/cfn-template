@@ -34,14 +34,7 @@ phases:
     commands:
       - echo "Deploying CloudFormation stack..."
       - echo ${PARAMETERS}
-      - |
-        aws cloudformation deploy
-        --template-file ${TEMPLATE_FILE}
-        --stack-name ${STACK_NAME}
-        --region $AWS_REGION
-        --capabilities CAPABILITY_NAMED_IAM
-        --parameter-overrides ${PARAMETERS}
-  #--parameter-overrides $(echo "${PARAMETERS}" | tr '\n' ' ')
+      - aws cloudformation deploy --template-file ${TEMPLATE_FILE} --stack-name ${STACK_NAME} --region $AWS_REGION --capabilities CAPABILITY_NAMED_IAM --parameter-overrides $(echo "${PARAMETERS}" | tr '\n' ' ')
 
   post_build:
     commands:
