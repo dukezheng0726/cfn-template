@@ -12,7 +12,7 @@ env:
       ParameterKey=SubnetID1,ParameterValue=subnet-08034885b1739ecec 
       ParameterKey=SubnetID2,ParameterValue=subnet-05fd5199c368282c9 
       ParameterKey=ASGMinValue,ParameterValue=2 
-      ParameterKey=ASGMaxValue,ParameterValue=10
+      ParameterKey=ASGMaxValue,ParameterValue=15
 
 phases:
   install:
