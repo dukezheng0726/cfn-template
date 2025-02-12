@@ -2,7 +2,7 @@ Parameters:
   VpcID:
     Description: Enter your VPC ID
     Type: String
-    #Default: "vpc-063632df62ea1985b"
+    Default: "vpc-063632df62ea1985b"
 
   EC2SGName:
     Description: Enter your EC2 SG Name
