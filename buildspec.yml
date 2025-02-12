@@ -35,6 +35,7 @@ phases:
       - |
         if [ "$ACTION" == "deploy" ]; then
           echo "Deploying CloudFormation stack: $STACK_NAME..."
+          echo "${PARAMETERS}" | tr '\n' ' '
           aws cloudformation deploy \
           --stack-name $STACK_NAME \
           --template-file ${TEMPLATE_FILE} \
