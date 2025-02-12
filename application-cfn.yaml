@@ -87,7 +87,7 @@ Parameters:
   ASGMaxValue:
     Description: Enter your Max Size of ASG
     Type: String
-    Deafult: 10
+    Default: 10
 
   ASGScalingThreshold:
     Description: Enter your CPU Utilization Threshold
